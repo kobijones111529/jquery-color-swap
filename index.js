@@ -10,11 +10,14 @@ $(document).ready(function() {
       <div class="item red-bg">
         <p>${jqElem.data('count')}</p>
         <button class="yellow-btn">Yellow</button>
-        <button>Delete</button>
+        <button class="delete-btn">Delete</button>
       </div>
     `);
   });
   $('#item-container').on('click', '.yellow-btn', function(e) {
     $(e.target).parent().css('background-color', 'yellow');
+  });
+  $('#item-container').on('click', '.delete-btn', function(e) {
+    $(e.target).parent().remove();
   });
 });
