@@ -4,14 +4,17 @@ $(document).ready(function() {
     // Update count
     const jqElem = $(e.target);
     const count = jqElem.data('count');
-    jqElem.data('count', count + 1)
+    jqElem.data('count', count + 1);
 
-    $(document.body).append(`
-      <div class="red-bg">
+    $('#item-container').append(`
+      <div class="item red-bg">
         <p>${jqElem.data('count')}</p>
-        <button>Yellow</button>
+        <button class="yellow-btn">Yellow</button>
         <button>Delete</button>
       </div>
     `);
+  });
+  $('#item-container').on('click', '.yellow-btn', function(e) {
+    $(e.target).parent().css('background-color', 'yellow');
   });
 });
