@@ -9,6 +9,8 @@ $(document).ready(function() {
     $(document.body).append(`
       <div>
         <p>${jqElem.data('count')}</p>
+        <button>Yellow</button>
+        <button>Delete</button>
       </div>
     `);
   });
