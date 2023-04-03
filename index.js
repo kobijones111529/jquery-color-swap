@@ -7,7 +7,7 @@ $(document).ready(function() {
     jqElem.data('count', count + 1)
 
     $(document.body).append(`
-      <div>
+      <div class="red-bg">
         <p>${jqElem.data('count')}</p>
         <button>Yellow</button>
         <button>Delete</button>
