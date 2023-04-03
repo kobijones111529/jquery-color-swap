@@ -3,8 +3,7 @@ $(document).ready(function() {
   $('#generate-btn').on('click', function(e) {
     // Update count
     const jqElem = $(e.target);
-    const count = jqElem.data('count');
-    jqElem.data('count', count + 1);
+    jqElem.data('count', jqElem.data('count') + 1);
 
     $('#item-container').append(`
       <div class="item red-bg">
